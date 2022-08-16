@@ -1,8 +1,13 @@
 import React from 'react';
 
-function App() {
+import { AuthProvider } from './providers/AuthProvider/AuthProvider'
+import { RootRoutes } from './routes/RootRoutes';
+
+function App(): JSX.Element {
   return (
-    <div>EveryDay Tools</div>
+    <AuthProvider>
+      <RootRoutes />
+    </AuthProvider>
   );
 }
 
